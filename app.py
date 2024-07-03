@@ -7,7 +7,7 @@ from summarizer import Summarizer
 app = Flask(__name__)
 
 
-@app.route('/message')
+@app.route('/message',  methods = ['POST'])
 def api():
     data = request.json
     messages = data['messages']
